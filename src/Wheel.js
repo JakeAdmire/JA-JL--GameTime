@@ -21,6 +21,7 @@ class Wheel {
     // if land on lose a turn invoke loseTurn method
   }
   bankrupt(player) {
+    player.roundScore = 0;
     // reset player roundScore to 0
   }
   loseTurn(player) {

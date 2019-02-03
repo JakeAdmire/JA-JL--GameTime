@@ -34,7 +34,7 @@ describe('Wheel', function() {
     expect(wheel.currentSpin).to.not.be.an('undefined');
   })
 
-  it.skip('should reset player score to zero when the wheel lands on bankrupt', function() {
+  it('should reset player score to zero when the wheel lands on bankrupt', function() {
     player.roundScore = 10;
     // not sure how to intentionally make the wheel land on bankrupt to test this
     wheel.bankrupt(player);
