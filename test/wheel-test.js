@@ -37,17 +37,19 @@ describe('Wheel', function() {
   it.skip('should reset player score to zero when the wheel lands on bankrupt', function() {
     player.roundScore = 10;
     // not sure how to intentionally make the wheel land on bankrupt to test this
+    wheel.bankrupt(player);
     expect(player.roundScore).to.equal(0);
   })
 
   it.skip('should end player turn when the wheel lands on lose-a-turn', function() {
     player.currentTurn = true;
     // not sure how to intentionally make the wheel land on lose-a-turn to test this
+    wheel.bankrupt(player);
     expect(player.currentTurn).to.equal(false);
-    
   })
 
   it.skip('should prompt player to choose a consonant if the wheel lands on a dollar amount', function() {
-
+    // not sure how to intentionally make the wheel land on a number to test this
+    player.chooseConsonant();
   })
 });
