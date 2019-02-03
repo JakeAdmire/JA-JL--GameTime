@@ -41,10 +41,10 @@ describe('Wheel', function() {
     expect(player.roundScore).to.equal(0);
   })
 
-  it.skip('should end player turn when the wheel lands on lose-a-turn', function() {
+  it('should end player turn when the wheel lands on lose-a-turn', function() {
     player.currentTurn = true;
     // not sure how to intentionally make the wheel land on lose-a-turn to test this
-    wheel.bankrupt(player);
+    wheel.loseTurn(player);
     expect(player.currentTurn).to.equal(false);
   })
 

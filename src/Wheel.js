@@ -25,6 +25,7 @@ class Wheel {
     // reset player roundScore to 0
   }
   loseTurn(player) {
+    player.currentTurn = false;
     // end player turn
     // switch to next player
   }
