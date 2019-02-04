@@ -1,5 +1,4 @@
 import data from './data.js';
-import Player from './Player.js';
 
 class Wheel {
   constructor() {
@@ -28,6 +27,9 @@ class Wheel {
     player.currentTurn = false;
     // end player turn
     // switch to next player
+  }
+  chooseConsonant(player) {
+    player.chooseConsonant();
   }
 };
 

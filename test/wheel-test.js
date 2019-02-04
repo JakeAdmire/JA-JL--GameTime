@@ -48,8 +48,7 @@ describe('Wheel', function() {
     expect(player.currentTurn).to.equal(false);
   })
 
-  it.skip('should prompt player to choose a consonant if the wheel lands on a dollar amount', function() {
+  it('should prompt player to choose a consonant if the wheel lands on a dollar amount', function() {
     // not sure how to intentionally make the wheel land on a number to test this
-    player.chooseConsonant();
   })
 });

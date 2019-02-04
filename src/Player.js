@@ -16,6 +16,9 @@ class Player {
   resetScore() {
     this.roundScore = 0;
   }
+  chooseConsonant() {
+    return true;
+  }
   buyVowel() {
     if (this.roundScore >= 100) {
         this.roundScore -= 100;

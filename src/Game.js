@@ -1,5 +1,5 @@
 class Game {
-  constructor(difficulty, round, players) {
+  constructor(difficulty, players) {
     this.difficulty = difficulty;
     this.round = 1;
     this.players = [];
