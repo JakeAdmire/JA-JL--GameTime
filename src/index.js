@@ -51,7 +51,7 @@ function playGame(e) {
   e.preventDefault();
   if ( $player1Name[0].value && $player2Name[0].value && $player3Name[0].value ) {
     buildGame();
-    // $openingPrompt.toggle;
+    $(".name-input").fadeOut(1000);
   } else {
     console.log('fill in names');
     // $promptWarning.toggle;
@@ -63,6 +63,8 @@ function buildGame() {
   game.createWheel();
   game.createPuzzle();
 }
+
+
 
 function createPlayerNames() {
   const playerNames = [];
