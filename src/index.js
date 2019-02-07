@@ -29,6 +29,10 @@ $('body').keypress(function(e) {
 
 $('.hidden-popup').hide();
 
+$('.end-game').on('click', () => {
+  location.reload();
+})
+
 $('.consonant, .vowel').on('click', (event) => {
   game.guessLetter(event);
 })
