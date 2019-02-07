@@ -1,6 +1,4 @@
-// jQuery goes here and anything that minipulates the dom
 import $ from 'jquery';
-
 
 const domUpdates = {
   hideElement() {
@@ -88,7 +86,6 @@ const domUpdates = {
   updateTurn(oldPlayer, newPlayer) {
     $(`.player-${oldPlayer}`).removeClass('highlight');
     $(`.player-${newPlayer}`).addClass('highlight'); 
-    console.log($(`.player-${newPlayer}`)); 
   },
 
   displayDetails(difficulty, category) {
@@ -119,21 +116,9 @@ const domUpdates = {
   },
 
   clearBoard() {
-    console.log('clearing board...')
     $('.wheel').empty();
     $('.puzzle-box').empty();  
-  },
-
+  }
 };
-
-
-
-
-
-
-
-
-
-
 
 export default domUpdates;
