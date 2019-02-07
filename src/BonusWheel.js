@@ -11,6 +11,11 @@ class BonusWheel extends Wheel {
       'A goat of your choosing'
     ];
   }
+  createBonusWheel() {
+    let randomIndex = Math.floor(Math.random() * this.prizes.length);
+    this.prizes[randomIndex];
+    console.log('bonusprize', this.prizes[randomIndex])
+  }
   revealConsonants() {
     // reveal a random amount of consonants between 1 and 6
   }
