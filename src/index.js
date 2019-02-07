@@ -29,6 +29,10 @@ $('body').keypress(function(e) {
 
 $('.hidden-popup').hide();
 
+$('.end-game').on('click', () => {
+  location.reload();
+})
+
 $('.consonant, .vowel').on('click', (event) => {
   game.guessLetter(event);
 })
@@ -40,6 +44,7 @@ $('.submit-names').on( 'click', (e) => {
     game = new Game();
     buildGame();
     domUpdates.fadeNameInput();
+    domUpdates.disableBuyVowel();
   } else {
     // $promptWarning.toggle;
   }
@@ -55,9 +60,30 @@ $('.buy-vowel').on('click', (e) => {
   game.buyVowel();
 })
 
+$('.solve-puzzle').on('click', () => {
+  domUpdates.displaySolvePuzzle();
+  console.log($('.puzzle-guess'));
+  $('.remove-popup').on('click', () => {
+    console.log($('.puzzle-guess').val());
+  // check the entire string v entire puzzle string 
+  if (game.roundPuzzle.answer.toUpperCase() === 
+    $('.puzzle-guess').val().toUpperCase()) {
+      game.endRound();
+      domUpdates.removeSolvePuzzle();
+    } else {
+      domUpdates.removeSolvePuzzle();
+      game.cyclePlayers();
+    }
+  })
+})
+
+
 function buildGame() {
   createPlayerNames();
   game.newRound();
+  game.players.forEach((player, i) => {
+    domUpdates.totalScoreUpdate(i, '0');
+  });
 }
 
 function createPlayerNames() {

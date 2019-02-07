@@ -64,12 +64,20 @@ const domUpdates = {
     }
   },
 
-  displayCorrectLetter(letter, i) {
-    $(`.piece-${i}`).removeClass('hidden')
+  displayCorrectLetter(puzzle, guessLetter) {
+    puzzle.forEach((letter, i) => {
+      if (letter === guessLetter) {
+        $(`.piece-${i}`).removeClass('hidden')
+      } 
+    })
   },
 
   scoreUpdate(player, score) {
     $(`#score-player${player}`).text(score);
+  },
+
+  totalScoreUpdate(player, score) {
+    $(`#total-player${player}`).text(score);
   },
 
   updateRound(oldRound, newRound) {
@@ -77,12 +85,47 @@ const domUpdates = {
     $(`.round-${newRound}`).addClass('highlight');  
   },
 
+  updateTurn(oldPlayer, newPlayer) {
+    $(`.player-${oldPlayer}`).removeClass('highlight');
+    $(`.player-${newPlayer}`).addClass('highlight'); 
+    console.log($(`.player-${newPlayer}`)); 
+  },
+
   displayDetails(difficulty, category) {
     $('.difficulty').text(`DIFFICULTY: ${difficulty} out of 4`);
     $('.category').text(`CATEGORY: ${category}`);
   },
 
+  disableBuyVowel() {
+    $('.buy-vowel').attr('disabled', true);
+    $('.buy-vowel').addClass('disabled');
+  },
+
+  enableBuyVowel() {
+    $('.buy-vowel').attr('disabled', false);
+    $('.buy-vowel').removeClass('disabled');
+  },
+
+  displaySolvePuzzle() {
+    $('.hidden-popup').fadeIn();
+    $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
+    $('.hidden-popup').append('<input class="puzzle-guess">');
+    $('.hidden-popup').append('<button class="remove-popup">Submit your answer</button>');
+  },
+
+  removeSolvePuzzle() {
+    $('.hidden-popup').fadeOut();
+    $('.hidden-popup').empty();
+  },
+
+  clearBoard() {
+    console.log('clearing board...')
+    $('.wheel').empty();
+    $('.puzzle-box').empty();  
+  },
+
 };
+
 
 
 
