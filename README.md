@@ -34,7 +34,6 @@ Undoubtedly, the biggest challenge of this project has been forcing the JavaScri
 
 ## Future Implementation Plans
 **Given the time** we would like to implement these features:
-- Multiple rounds rather than being stuck on round 1
 - Cleaner, DRYer CSS code
 - Mobility
 
