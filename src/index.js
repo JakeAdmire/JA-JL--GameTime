@@ -40,14 +40,11 @@ $('.submit-names').on( 'click', (e) => {
     domUpdates.fadeNameInput();
     domUpdates.disableBuyVowel();
     domUpdates.updateTurn('2', '0');
-  } else {
-    // $promptWarning.toggle;
   }
 });
 
 $('.spin-wheel').on('click', () => {
   game.implementWheelResults();
-
 })
 
 $('.buy-vowel').on('click', (e) => {
@@ -57,11 +54,8 @@ $('.buy-vowel').on('click', (e) => {
 
 $('.solve-puzzle').on('click', () => {
   domUpdates.displaySolvePuzzle();
-  console.log($('.puzzle-guess'));
   $('.remove-popup').on('click', () => {
-    console.log($('.puzzle-guess').val());
-  // check the entire string v entire puzzle string 
-  if (game.roundPuzzle.answer.toUpperCase() === 
+    if (game.roundPuzzle.answer.toUpperCase() === 
     $('.puzzle-guess').val().toUpperCase()) {
       game.endRound();
       domUpdates.removeSolvePuzzle();

@@ -1,12 +1,16 @@
 import Game from '../src/Game.js';
-import Player from '../src/Player.js';
 import domUpdates from '../src/domUpdates.js';
 import chai from 'chai';
 import spies from 'chai-spies';
 
 const expect = chai.expect;
 chai.use(spies);
-chai.spy.on(domUpdates, ['disableKeyboard', 'updateRound', 'appendWheel', 'toggleKeyboard', 'displayCorrectLetter', 'scoreUpdate', 'displayDetails', 'appendPuzzle'], () => true);
+chai.spy.on(domUpdates, [
+  'disableKeyboard', 'updateRound', 
+  'appendWheel', 'toggleKeyboard', 
+  'displayCorrectLetter', 'scoreUpdate', 
+  'displayDetails', 'appendPuzzle', 
+  'clearBoard', 'updateTurn'], () => true);
 
 
 describe('Game', function() {
@@ -61,7 +65,7 @@ describe('Game', function() {
     expect(game.roundPuzzle.difficulty).to.be.an('object');
   })
 
-  it('should be able to randomly choose a puzzle, answer, difficulty, and category from the bank', function() {
+  it('should be able to randomly choose a puzzle from the bank', function() {
     expect(game.roundPuzzle).to.deep.equal([]);
     game.newRound();
     expect(game.roundPuzzle.puzzleDetails).to.be.an('object');
@@ -79,16 +83,21 @@ describe('Game', function() {
 
   it('should move to the next player\'s turn', function() {
     expect(game.currentPlayer).to.equal(0);
+    const names = ['Josh', 'Jake', 'Pam'];
+    game.createPlayers(names);
     game.cyclePlayers();
     expect(game.currentPlayer).to.equal(1);
   })
 
   it('should be player one\'s turn after player three', function() {
     expect(game.currentPlayer).to.equal(0);
+    const names = ['Josh', 'Jake', 'Pam'];
+    game.createPlayers(names);
+
+
     game.cyclePlayers();
     game.cyclePlayers();
-    game.cyclePlayers();
-    expect(game.currentPlayer).to.equal(3);
+    expect(game.currentPlayer).to.equal(2);
     game.cyclePlayers();
     expect(game.currentPlayer).to.equal(0);
   })
@@ -98,13 +107,6 @@ describe('Game', function() {
     game.newRound();
     expect(game.round).to.equal(1);
   })
- // // FOR PAM: 
- //  it('should spin the wheel and land on a value', () => {
- //    game.newRound();
- //    expect(game.roundWheel.currentSpin).to.deep.equal(null);
- //    game.implementWheelResults();
- //    //expect(game.roundWheel.currentSpin).to.be.an('number' || 'string');
- //  })
 });
 
 

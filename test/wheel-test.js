@@ -1,5 +1,4 @@
 import Wheel from '../src/Wheel.js';
-import Player from '../src/Player.js';
 import domUpdates from '../src/domUpdates.js';
 
 
@@ -11,10 +10,8 @@ chai.spy.on(domUpdates, ['displayElement'], () => true);
 
 describe('Wheel', function() {
   let wheel;
-  let player;
   beforeEach(function() {
     wheel = new Wheel();
-    player = new Player();
   });
 
   it('instantiates our good friend, Wheel', function() {

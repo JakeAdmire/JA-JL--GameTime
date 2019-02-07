@@ -105,9 +105,11 @@ const domUpdates = {
 
   displaySolvePuzzle() {
     $('.hidden-popup').fadeIn();
-    $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
+    $('.hidden-popup').append(
+      '<p class="puzzle-prompt">Solve The Puzzle!!</p>');
     $('.hidden-popup').append('<input class="puzzle-guess">');
-    $('.hidden-popup').append('<button class="remove-popup">Submit your answer</button>');
+    $('.hidden-popup').append(
+      '<button class="remove-popup">Submit your answer</button>');
   },
 
   removeSolvePuzzle() {

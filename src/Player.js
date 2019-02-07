@@ -8,20 +8,15 @@ class Player {
   }
   winRound() {
     this.totalScore += this.roundScore;
-    // game.scoreUpdate();
   }
   winGame() {
     this.gameWinner = true;
-    // start bonus round
   }
   resetScore() {
     this.roundScore = 0;
-    console.log(this.roundScore);
-    // game.scoreUpdate();
   }
   buyVowel() {
     this.roundScore -= 100;
-    // player chooses a vowel;
   }
 }
 

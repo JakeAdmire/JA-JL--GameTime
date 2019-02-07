@@ -1,5 +1,4 @@
 import chai from 'chai';
-import data from '../src/data.js';
 import Puzzle from '../src/Puzzle.js';
 const expect = chai.expect;
 

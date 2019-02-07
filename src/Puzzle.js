@@ -37,7 +37,7 @@ class Puzzle {
   }
   displayPuzzle() {
     let splitAnswer = this.answer.split('');
-    console.log(splitAnswer);
+    console.log(this.answer);
     splitAnswer.forEach((letter, i) => {
       domUpdates.appendPuzzle(letter, i);
     })

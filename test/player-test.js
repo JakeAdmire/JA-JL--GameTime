@@ -26,7 +26,7 @@ describe('Player', function() {
     expect(player.roundScore).to.equal(0);
   });
 
-  it('should subtract 100 from player\'s round score when purchasing vowel', function() {
+  it('should subtract $100 when purchasing vowel', function() {
     player.roundScore = 500;
     player.buyVowel();
     expect(player.roundScore).to.equal(400);
