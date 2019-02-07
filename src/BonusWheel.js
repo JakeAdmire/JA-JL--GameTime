@@ -19,6 +19,9 @@ class BonusWheel extends Wheel {
   revealConsonants() {
     // reveal a random amount of consonants between 1 and 6
   }
+  playBonusRound() {
+    
+  }
 }
 
 export default BonusWheel;

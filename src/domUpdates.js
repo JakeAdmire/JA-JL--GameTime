@@ -119,7 +119,6 @@ const domUpdates = {
   },
 
   clearBoard() {
-    console.log('clearing board...')
     $('.wheel').empty();
     $('.puzzle-box').empty();  
   },
