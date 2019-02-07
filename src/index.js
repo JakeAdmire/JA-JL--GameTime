@@ -40,6 +40,7 @@ $('.submit-names').on( 'click', (e) => {
     game = new Game();
     buildGame();
     domUpdates.fadeNameInput();
+    domUpdates.disableBuyVowel();
   } else {
     // $promptWarning.toggle;
   }
@@ -53,6 +54,10 @@ $('.spin-wheel').on('click', () => {
 $('.buy-vowel').on('click', (e) => {
   e.preventDefault();
   game.buyVowel();
+})
+
+$('.solve-puzzle').on('click', () => {
+  
 })
 
 function buildGame() {

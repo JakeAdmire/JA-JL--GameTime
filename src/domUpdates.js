@@ -86,6 +86,15 @@ const domUpdates = {
     $('.category').text(`CATEGORY: ${category}`);
   },
 
+  disableBuyVowel() {
+    $('.buy-vowel').attr('disabled', true);
+    $('.buy-vowel').addClass('disabled');
+  },
+
+  enableBuyVowel() {
+    $('.buy-vowel').attr('disabled', false);
+    $('.buy-vowel').removeClass('disabled');
+  },
 };
 
 

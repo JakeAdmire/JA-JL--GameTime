@@ -58,10 +58,25 @@ class Game {
       this.currentPlayer = 0;
       console.log(`it is now player index ${this.currentPlayer} turn`)
     }
+    this.checkScore();
+    // check score of player if over 100 allow button vowel press
     // highlight current player on dom
   }
   buyVowel() {
-    domUpdates.toggleKeyboard();
+    if (this.players[this.currentPlayer].roundScore >= 100) {
+      this.players[this.currentPlayer].buyVowel();
+      domUpdates.toggleKeyboard();
+      domUpdates.scoreUpdate(this.currentPlayer, 
+        this.players[this.currentPlayer].roundScore);
+    }
+    domUpdates.disableBuyVowel();
+    // upon selection of vowel
+    // re enable keyboard
+  }
+  checkScore() {
+    if (this.players[this.currentPlayer].roundScore >= 100) {
+      domUpdates.enableBuyVowel();
+    }
   }
   guessLetter(e) {
     domUpdates.disableKeyboard();
@@ -75,6 +90,7 @@ class Game {
           this.roundWheel.currentSpin;
       domUpdates.scoreUpdate(this.currentPlayer, 
           this.players[this.currentPlayer].roundScore);
+      this.checkScore();
     } else {
       this.cyclePlayers();
     }
