@@ -3,7 +3,7 @@ Wheel of MisFortune is a work in progress 'Wheel of Fortune' game assigned durin
 You can learn more about the assignment spec by following [this](http://frontend.turing.io/projects/wheel-of-fortune.html) link.
 
 ### Link to live version of project
-[link text](https://linkexample.com).
+[You can enjoy the full experience here!](https://jakeadmire.github.io/gametime-starter/).
 
 ## What was learned?
 Object Oriented Programming (OOP) was a concept almost unknown to us before this project.  
