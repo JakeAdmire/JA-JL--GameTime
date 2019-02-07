@@ -12,7 +12,6 @@ class Game {
     this.bonusWheel = [];
     this.roundPuzzle = [];
     this.splitPuzzle = [];
-    this.incorrectGuess = false;
   }
   createPlayers(names) {
     let thisPlayers = this.players;
@@ -51,13 +50,15 @@ class Game {
     this.roundPuzzle.randomizePuzzle();
   }
   cyclePlayers() {
-    if (this.currentPlayer < 3) {
+    // remove highlights from dom
+    if (this.currentPlayer < 2) {
       this.currentPlayer++;
-      console.log(`it is now player ${this.currentPlayer} turn`)
+      console.log(`it is now player index ${this.currentPlayer} turn`)
     } else {
       this.currentPlayer = 0;
-      console.log(`it is now player ${this.currentPlayer} turn`)
+      console.log(`it is now player index ${this.currentPlayer} turn`)
     }
+    // highlight current player on dom
   }
   buyVowel() {
     domUpdates.toggleKeyboard();
@@ -74,11 +75,8 @@ class Game {
           this.roundWheel.currentSpin;
       domUpdates.scoreUpdate(this.currentPlayer, 
           this.players[this.currentPlayer].roundScore);
-    } 
-
-    if (this.incorrectGuess === true) {
-      this.cyclePlayers()
-      this.incorrectGuess = false;
+    } else {
+      this.cyclePlayers();
     }
   }
   implementWheelResults() {
@@ -88,8 +86,10 @@ class Game {
       this.players[this.currentPlayer].resetScore();
       domUpdates.scoreUpdate(this.currentPlayer, 
         this.players[this.currentPlayer].roundScore);
+      this.cyclePlayers();
     } else if (this.currentSpin === 'LOSE-A-TURN') {
       console.log('youve lost a turn');
+      this.cyclePlayers();
     }
 
   }
