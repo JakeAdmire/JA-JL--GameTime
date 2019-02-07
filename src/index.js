@@ -39,7 +39,10 @@ $('.submit-names').on( 'click', (e) => {
     buildGame();
     domUpdates.fadeNameInput();
     domUpdates.disableBuyVowel();
-  } 
+    domUpdates.updateTurn('2', '0');
+  } else {
+    // $promptWarning.toggle;
+  }
 });
 
 $('.spin-wheel').on('click', () => {
