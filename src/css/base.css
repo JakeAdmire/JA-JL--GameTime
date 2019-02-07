@@ -246,7 +246,7 @@ footer article div {
 
 footer h3,
 footer h4 {
-  color: hsla( 0, 0%, 100%, 0.4)
+  color: hsla( 0, 0%, 100%, 0.4);
   margin: 0;
   text-align: center;
 }
