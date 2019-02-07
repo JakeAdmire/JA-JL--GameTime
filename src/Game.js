@@ -87,11 +87,9 @@ class Game {
       domUpdates.scoreUpdate(this.currentPlayer, 
         this.players[this.currentPlayer].roundScore);
       this.cyclePlayers();
-    } else if (this.currentSpin === 'LOSE-A-TURN') {
-      console.log('youve lost a turn');
+    } else if (this.roundWheel.currentSpin === 'LOSE A TURN') {
       this.cyclePlayers();
     }
-
   }
   endGame() {
     // show 'game over' screen
