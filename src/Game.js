@@ -65,21 +65,15 @@ class Game {
   guessLetter(e) {
     domUpdates.disableKeyboard();
     let uppercasePuzzle = this.roundPuzzle.answer.toUpperCase();
-    // this.splitPuzzle = uppercasePuzzle.split('');
-    // this.splitPuzzle.forEach((letter, i) => {
-    //   if (letter === e.currentTarget.innerText) {
-    //     domUpdates.displayCorrectLetter(letter, i);
-    //     this.players[this.currentPlayer].roundScore += 
-    //       this.roundWheel.currentSpin;
-    //     domUpdates.scoreUpdate(this.currentPlayer, 
-    //       this.players[this.currentPlayer].roundScore);
-    //   } 
-    // })
-    console.log(uppercasePuzzle);
-    console.log(e.currentTarget.innerText);
-
+    this.splitPuzzle = uppercasePuzzle.split('');
+    // 
+      domUpdates.displayCorrectLetter(this.splitPuzzle, e.currentTarget.innerText);
     if (uppercasePuzzle.includes(e.currentTarget.innerText)) {
-      console.log('correct letter')
+      console.log('correct letter');
+      this.players[this.currentPlayer].roundScore += 
+          this.roundWheel.currentSpin;
+      domUpdates.scoreUpdate(this.currentPlayer, 
+          this.players[this.currentPlayer].roundScore);
     } 
 
     if (this.incorrectGuess === true) {

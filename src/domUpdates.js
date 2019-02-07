@@ -64,8 +64,12 @@ const domUpdates = {
     }
   },
 
-  displayCorrectLetter(letter, i) {
-    $(`.piece-${i}`).removeClass('hidden')
+  displayCorrectLetter(puzzle, guessLetter) {
+    puzzle.forEach((letter, i) => {
+      if (letter === guessLetter) {
+        $(`.piece-${i}`).removeClass('hidden')
+      } 
+    })
   },
 
   scoreUpdate(player, score) {
