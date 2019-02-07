@@ -58,7 +58,8 @@ header button:hover {
   align-self: center;
 }
 
-.rounds .highlight {
+.rounds .highlight,
+footer .highlight {
   color: hsla( 0, 0%, 100%, 0.8);
   text-shadow: 2px 4px 4px hsl( 23, 31%, 8%);
 }
@@ -263,8 +264,7 @@ footer article div {
 footer h3,
 footer h4 {
   margin: 0;
-  color: hsla( 0, 0%, 100%, 0.8);
-  text-shadow: 2px 4px 4px hsl( 23, 31%, 8%);
+  /*color: hsla( 0, 0%, 100%, 0.4);*/
   text-align: center;
 }
 

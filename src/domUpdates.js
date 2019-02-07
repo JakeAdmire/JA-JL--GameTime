@@ -85,6 +85,12 @@ const domUpdates = {
     $(`.round-${newRound}`).addClass('highlight');  
   },
 
+  updateTurn(oldPlayer, newPlayer) {
+    $(`.player-${oldPlayer}`).removeClass('highlight');
+    $(`.player-${newPlayer}`).addClass('highlight'); 
+    console.log($(`.player-${newPlayer}`)); 
+  },
+
   displayDetails(difficulty, category) {
     $('.difficulty').text(`DIFFICULTY: ${difficulty} out of 4`);
     $('.category').text(`CATEGORY: ${category}`);

@@ -53,6 +53,8 @@ class Game {
     this.roundPuzzle.randomizePuzzle();
   }
   cyclePlayers() {
+    let oldPlayer = null;
+    let newPlayer = null;
     // remove highlights from dom
     if (this.currentPlayer < 2) {
       this.currentPlayer++;
@@ -62,6 +64,14 @@ class Game {
       console.log(`it is now player index ${this.currentPlayer} turn`)
     }
     this.checkScore();
+
+    if (this.currentPlayer === 0) {oldPlayer = 2; newPlayer = 0
+    } else if (this.currentPlayer === 1) {oldPlayer = 0; newPlayer = 1
+    } else if (this.currentPlayer === 2) {oldPlayer = 1; newPlayer = 2
+    }
+    console.log('currentPlayer', newPlayer);
+    console.log('oldPlayer', oldPlayer);
+    domUpdates.updateTurn(oldPlayer, newPlayer);
     // check score of player if over 100 allow button vowel press
     // highlight current player on dom
   }
