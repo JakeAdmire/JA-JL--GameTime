@@ -2,6 +2,7 @@ import Wheel from './Wheel.js';
 import Player from './Player.js';
 import Puzzle from './Puzzle.js';
 import domUpdates from './domUpdates.js';
+import BonusWheel from './BonusWheel.js';
 
 class Game {
   constructor() {
@@ -37,7 +38,8 @@ class Game {
       //console log the individual puzzle here
     }
     if (this.round === 5) {
-      // this.createBonusWheel();
+      this.bonusWheel = new BonusWheel;
+      this.bonusWheel.createBonusWheel();
       // start bonus round;
     } 
   }

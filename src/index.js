@@ -20,7 +20,6 @@ import $ from 'jquery';
 
 let game;
 
-
 $('body').keypress(function(e) {
   if (e.keyCode === 13) {
     return false;
@@ -45,6 +44,7 @@ $('.submit-names').on( 'click', (e) => {
     buildGame();
     domUpdates.fadeNameInput();
     domUpdates.disableBuyVowel();
+    domUpdates.updateTurn('2', '0');
   } else {
     // $promptWarning.toggle;
   }
