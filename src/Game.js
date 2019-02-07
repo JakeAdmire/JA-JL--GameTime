@@ -86,8 +86,11 @@ class Game {
       domUpdates.displayCorrectLetter(this.splitPuzzle, e.currentTarget.innerText);
     if (uppercasePuzzle.includes(e.currentTarget.innerText)) {
       console.log('correct letter');
-      this.players[this.currentPlayer].roundScore += 
+      this.splitPuzzle.forEach(letter => {
+        if (letter === e.currentTarget.innerText)
+        this.players[this.currentPlayer].roundScore += 
           this.roundWheel.currentSpin;
+      })
       domUpdates.scoreUpdate(this.currentPlayer, 
           this.players[this.currentPlayer].roundScore);
       this.checkScore();
@@ -108,8 +111,10 @@ class Game {
     }
   }
   endRound() {
-    console.log('endround');
     this.players[this.currentPlayer].winRound();
+    this.players.forEach(player => {
+      player.resetScore();
+    })
   }
   endGame() {
     // show 'game over' screen

@@ -65,9 +65,8 @@ $('.solve-puzzle').on('click', () => {
   if (game.roundPuzzle.answer.toUpperCase() === 
     $('.puzzle-guess').val().toUpperCase()) {
       game.endRound();
-    // current player's total score += current player's roundScore
-    // !current player round score 0
-      // resetScore()
+      domUpdates.removeSolvePuzzle();
+      // change round (and dom)
   };
   })
 })

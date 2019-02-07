@@ -7,9 +7,7 @@ class Player {
     this.currentTurn = false;
   }
   winRound() {
-    console.log(this.totalScore)
     this.totalScore += this.roundScore;
-    console.log(this.totalScore)
     // game.scoreUpdate();
   }
   winGame() {
@@ -18,6 +16,7 @@ class Player {
   }
   resetScore() {
     this.roundScore = 0;
+    console.log(this.roundScore);
     // game.scoreUpdate();
   }
   buyVowel() {
