@@ -12,6 +12,7 @@ class Game {
     this.bonusWheel = [];
     this.roundPuzzle = [];
     this.splitPuzzle = [];
+    this.incorrectGuess = false;
   }
   createPlayers(names) {
     let thisPlayers = this.players;
@@ -52,25 +53,39 @@ class Game {
   cyclePlayers() {
     if (this.currentPlayer < 3) {
       this.currentPlayer++;
+      console.log(`it is now player ${this.currentPlayer} turn`)
     } else {
       this.currentPlayer = 0;
+      console.log(`it is now player ${this.currentPlayer} turn`)
     }
   }
   buyVowel() {
     domUpdates.toggleKeyboard();
   }
   guessLetter(e) {
+    domUpdates.disableKeyboard();
     let uppercasePuzzle = this.roundPuzzle.answer.toUpperCase();
-    this.splitPuzzle = uppercasePuzzle.split('');
-    this.splitPuzzle.forEach((letter, i) => {
-      if (letter === e.currentTarget.innerText) {
-        domUpdates.displayCorrectLetter(letter, i);
-        this.players[this.currentPlayer].roundScore += 
-          this.roundWheel.currentSpin;
-        domUpdates.scoreUpdate(this.currentPlayer, 
-          this.players[this.currentPlayer].roundScore);
-      }
-    })
+    // this.splitPuzzle = uppercasePuzzle.split('');
+    // this.splitPuzzle.forEach((letter, i) => {
+    //   if (letter === e.currentTarget.innerText) {
+    //     domUpdates.displayCorrectLetter(letter, i);
+    //     this.players[this.currentPlayer].roundScore += 
+    //       this.roundWheel.currentSpin;
+    //     domUpdates.scoreUpdate(this.currentPlayer, 
+    //       this.players[this.currentPlayer].roundScore);
+    //   } 
+    // })
+    console.log(uppercasePuzzle);
+    console.log(e.currentTarget.innerText);
+
+    if (uppercasePuzzle.includes(e.currentTarget.innerText)) {
+      console.log('correct letter')
+    } 
+
+    if (this.incorrectGuess === true) {
+      this.cyclePlayers()
+      this.incorrectGuess = false;
+    }
   }
   implementWheelResults() {
     this.roundWheel.spinWheel();
