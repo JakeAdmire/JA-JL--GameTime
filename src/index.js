@@ -57,8 +57,21 @@ $('.buy-vowel').on('click', (e) => {
 })
 
 $('.solve-puzzle').on('click', () => {
-  
+  domUpdates.displaySolvePuzzle();
+  console.log($('.puzzle-guess'));
+  $('.remove-popup').on('click', () => {
+    console.log($('.puzzle-guess').val());
+  // check the entire string v entire puzzle string 
+  if (game.roundPuzzle.answer.toUpperCase() === 
+    $('.puzzle-guess').val().toUpperCase()) {
+      game.endRound();
+    // current player's total score += current player's roundScore
+    // !current player round score 0
+      // resetScore()
+  };
+  })
 })
+
 
 function buildGame() {
   createPlayerNames();

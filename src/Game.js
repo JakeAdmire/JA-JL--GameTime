@@ -107,6 +107,10 @@ class Game {
       this.cyclePlayers();
     }
   }
+  endRound() {
+    console.log('endround');
+    this.players[this.currentPlayer].winRound();
+  }
   endGame() {
     // show 'game over' screen
     // display 'back to home screen' button

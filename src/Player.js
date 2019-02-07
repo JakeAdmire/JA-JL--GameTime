@@ -7,7 +7,9 @@ class Player {
     this.currentTurn = false;
   }
   winRound() {
+    console.log(this.totalScore)
     this.totalScore += this.roundScore;
+    console.log(this.totalScore)
     // game.scoreUpdate();
   }
   winGame() {

@@ -95,7 +95,15 @@ const domUpdates = {
     $('.buy-vowel').attr('disabled', false);
     $('.buy-vowel').removeClass('disabled');
   },
+
+  displaySolvePuzzle() {
+    $('.hidden-popup').fadeIn();
+    $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
+    $('.hidden-popup').append('<input class="puzzle-guess">');
+    $('.hidden-popup').append('<button class="remove-popup">Submit your answer</button>');
+  },
 };
+
 
 
 
