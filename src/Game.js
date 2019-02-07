@@ -39,7 +39,7 @@ class Game {
     }
     if (this.round === 5) {
       this.bonusWheel = new BonusWheel;
-      this.bonusWheel.createBonusWheel();
+      // this.bonusWheel.spinBonusWheel();
       this.createPuzzle();
       this.bonusWheel.prizes.forEach(prize => {
         domUpdates.appendWheel(prize); 
@@ -118,15 +118,19 @@ class Game {
     }
   }
   implementWheelResults() {
-    this.roundWheel.spinWheel();
-    if (this.roundWheel.currentSpin === 'BANKRUPT') {
-      domUpdates.disableKeyboard(); 
-      this.players[this.currentPlayer].resetScore();
-      domUpdates.scoreUpdate(this.currentPlayer, 
-        this.players[this.currentPlayer].roundScore);
-      this.cyclePlayers();
-    } else if (this.roundWheel.currentSpin === 'LOSE A TURN') {
-      this.cyclePlayers();
+    if (this.round < 5) {
+      this.roundWheel.spinWheel();
+      if (this.roundWheel.currentSpin === 'BANKRUPT') {
+        domUpdates.disableKeyboard(); 
+        this.players[this.currentPlayer].resetScore();
+        domUpdates.scoreUpdate(this.currentPlayer, 
+          this.players[this.currentPlayer].roundScore);
+        this.cyclePlayers();
+      } else if (this.roundWheel.currentSpin === 'LOSE A TURN') {
+        this.cyclePlayers();
+      }
+    } else {
+      this.bonusWheel.spinBonusWheel();
     }
   }
   endRound() {
