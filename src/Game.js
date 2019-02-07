@@ -21,10 +21,13 @@ class Game {
     })
   }
   newRound() {
+    domUpdates.clearBoard();
     this.round++;
-    this.players.forEach((player) => {
+    this.players.forEach((player, i) => {
       player.resetScore();
+      domUpdates.scoreUpdate(i, '0');
     });
+    // domUpdates.scoreUpdate(player, '0');
     domUpdates.disableKeyboard();
     domUpdates.updateRound(this.round - 1, this.round);
     if (this.round < 5) {
@@ -112,9 +115,14 @@ class Game {
   }
   endRound() {
     this.players[this.currentPlayer].winRound();
+    domUpdates.totalScoreUpdate(this.currentPlayer, 
+      this.players[this.currentPlayer].totalScore);
+    console.log(this.players);
     this.players.forEach(player => {
       player.resetScore();
+      console.log(player.roundScore);
     })
+    this.newRound();
   }
   endGame() {
     // show 'game over' screen

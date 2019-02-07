@@ -76,6 +76,10 @@ const domUpdates = {
     $(`#score-player${player}`).text(score);
   },
 
+  totalScoreUpdate(player, score) {
+    $(`#total-player${player}`).text(score);
+  },
+
   updateRound(oldRound, newRound) {
     $(`.round-${oldRound}`).removeClass('highlight');
     $(`.round-${newRound}`).addClass('highlight');  
@@ -102,9 +106,18 @@ const domUpdates = {
     $('.hidden-popup').append('<input class="puzzle-guess">');
     $('.hidden-popup').append('<button class="remove-popup">Submit your answer</button>');
   },
+
   removeSolvePuzzle() {
     $('.hidden-popup').fadeOut();
-  }
+    $('.hidden-popup').empty();
+  },
+
+  clearBoard() {
+    console.log('clearing board...')
+    $('.wheel').empty();
+    $('.puzzle-box').empty();  
+  },
+
 };
 
 

@@ -75,6 +75,9 @@ $('.solve-puzzle').on('click', () => {
 function buildGame() {
   createPlayerNames();
   game.newRound();
+  game.players.forEach((player, i) => {
+    domUpdates.totalScoreUpdate(i, '0');
+  });
 }
 
 function createPlayerNames() {
