@@ -28,7 +28,9 @@ Undoubtedly, the biggest challenge of this project has been forcing the JavaScri
 
 ### Screenshots of Project
 
-  ![image description](/src/images/example.png)
+  ![Enter Names Prompt](/src/images/screenshot0.png)
+  ![Initial Game Screen](/src/images/screenshot1.png)
+  ![Partially Through Game](/src/images/screenshot2.png)
 
 ## Future Implementation Plans
 **Given the time** we would like to implement these features:
