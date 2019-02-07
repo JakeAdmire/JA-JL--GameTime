@@ -40,7 +40,11 @@ class Game {
     if (this.round === 5) {
       this.bonusWheel = new BonusWheel;
       this.bonusWheel.createBonusWheel();
-      // start bonus round;
+      this.createPuzzle();
+      this.bonusWheel.prizes.forEach(prize => {
+        domUpdates.appendWheel(prize); 
+      })
+      // this.bonusWheel.playBonusRound();
     } 
   }
   createWheel() {
