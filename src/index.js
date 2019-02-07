@@ -70,8 +70,10 @@ $('.solve-puzzle').on('click', () => {
     $('.puzzle-guess').val().toUpperCase()) {
       game.endRound();
       domUpdates.removeSolvePuzzle();
-      // change round (and dom)
-  };
+    } else {
+      domUpdates.removeSolvePuzzle();
+      game.cyclePlayers();
+    }
   })
 })
 
