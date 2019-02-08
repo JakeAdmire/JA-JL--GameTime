@@ -24,7 +24,13 @@ As well as importing and exporting those classes amongst eachother:
     import $ from 'jquery';
 
 ## Challenges we faced
-Undoubtedly, the biggest challenge of this project has been forcing the JavaScript classes to speak to one another. Not understanding how it worked at the beginning of the project was a major setback, but it's something we have risen above.
+Undoubtedly, the biggest challenge of this project has been enabling the JavaScript classes to speak to one another. Not understanding how it worked at the beginning of the project was a major setback, but it's something we have risen above.
+
+## Project "Wins"
+Working remotely was simultaneously a challenge and an overall win for us. We both go to school in Denver; however, we live in different cities. In the end, we were able to accomplish a lot working remotely, which is a skill we are happy to have learned.
+
+## Minimum Viable Product
+
 
 ### Screenshots of Project
 
