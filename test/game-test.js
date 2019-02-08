@@ -15,7 +15,6 @@ chai.spy.on(domUpdates, [
   'displayDetails', 'appendPuzzle', 
   'clearBoard', 'updateTurn'], () => true);
 
-
 describe('Game', function() {
   let game;
   beforeEach(function() {

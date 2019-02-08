@@ -49,8 +49,6 @@ class Game {
       domUpdates.appendWheel(element);
     })
   }
-  //test that it gives you a puzzle
-  //test that chooseDiffiuclty and Rodnmixed is called
   createPuzzle() {
     this.roundPuzzle = new Puzzle
     this.roundPuzzle.chooseDifficulty();
@@ -74,9 +72,7 @@ class Game {
     }
     domUpdates.updateTurn(oldPlayer, newPlayer);
   }
-
-
-  buyVowel() {
+  clickVowel() {
     if (this.players[this.currentPlayer].roundScore >= 100) {
       this.players[this.currentPlayer].buyVowel();
       domUpdates.toggleKeyboard();
@@ -85,13 +81,11 @@ class Game {
     }
     domUpdates.disableBuyVowel();
   }
-
   checkScore() {
     if (this.players[this.currentPlayer].roundScore >= 100) {
       domUpdates.enableBuyVowel();
     }
   }
-
   guessLetter(e) {
     domUpdates.disableKeyboard();
     let uppercasePuzzle = this.roundPuzzle.answer.toUpperCase();
@@ -112,7 +106,6 @@ class Game {
       this.cyclePlayers();
     }
   }
-
   implementWheelResults() {
     if (this.round < 5) {
       this.roundWheel.spinWheel();
@@ -143,7 +136,6 @@ class Game {
     }
   }
   endGame() {
-    // domUpdates.removeSolvePuzzle();
     domUpdates.totalScoreUpdate(this.currentPlayer, this.players[this.currentPlayer].totalScore);
     domUpdates.displayWinGame(this.players);
   }
