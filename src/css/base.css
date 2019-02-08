@@ -1,9 +1,8 @@
 body {
   background: url('/images/background3.jpg');
   background-size: cover;
-  display: grid;
+  /*display: grid;*/
   font-family: 'Open Sans', sans-serif;
-  grid-template-rows: 80px 40px 300px 190px 88px;
   margin: 0;
 }
 
@@ -25,6 +24,7 @@ header {
   justify-content: center;
   text-shadow: 2px 4px 4px hsl( 23, 31%, 8%);
   width: 100%;
+  height: 80px;
 }
 
 header span {
@@ -56,6 +56,7 @@ header button:hover {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  height: 45px;
 }
 
 .rounds h2 {
@@ -72,6 +73,7 @@ main {
   display: flex;
   position: relative;
   width: 100%;
+  height: 305px
 }
 
 .wheel-container {
@@ -119,7 +121,7 @@ main button {
   font-size: 25px;
   height: 40px;
   width: 200px;
-  margin: 0 0 20px;
+  margin: 20px 0;
 }
 
 main button:hover,
@@ -197,6 +199,9 @@ main button:active,
   justify-content: center;
   margin: 0 auto;
   width: 1150px;
+  /*position: absolute;*/
+  /*bottom: 100px;*/
+  height: 180px;
 }
 
 .keyboard button {
@@ -225,6 +230,9 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 85px;
 }
 
 footer img {
@@ -270,6 +278,7 @@ footer h4 {
   justify-content: center;
   position: absolute;
   width: 100%;
+  top: 0;
 }
 
 .name-input form {
@@ -339,6 +348,7 @@ footer h4 {
   justify-content: center;
   position: absolute;
   width: 100%;
+  top: 0;
 }
 
 .hidden-popup p {
