@@ -76,7 +76,6 @@ describe('Game', function() {
     game.newRound();
     expect(game.roundPuzzle.puzzleDetails).to.be.an('object');
     expect(game.roundPuzzle.answer).to.be.an('string');
-    expect(game.roundPuzzle.domDifficulty).to.be.an('number');
     expect(game.roundPuzzle.category).to.be.an('string');
   })
 
@@ -106,6 +105,11 @@ describe('Game', function() {
     expect(game.currentPlayer).to.equal(2);
     game.cyclePlayers();
     expect(game.currentPlayer).to.equal(0);
+  })
+
+  it('should create a bonus wheel when the round is greater than four', function() {
+    game.newRound();
+    expect(game.round).to.equal(1);
   })
 
 });
