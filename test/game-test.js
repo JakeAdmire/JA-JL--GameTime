@@ -2,6 +2,7 @@ import Game from '../src/Game.js';
 import BonusWheel from '../src/bonusWheel.js';
 import domUpdates from '../src/domUpdates.js';
 import Wheel from '../src/Wheel.js';
+import Puzzle from '../src/Puzzle.js';
 import chai from 'chai';
 import spies from 'chai-spies';
 
@@ -122,6 +123,13 @@ describe('Game', function() {
     expect(game.bonusWheel).to.be.an.instanceof(Wheel);
   })
 
+  it('should create a new instance of puzzle', function() {
+    expect(game.roundPuzzle).to.deep.equal([]);
+
+    game.createPuzzle();
+
+    expect(game.roundPuzzle).to.be.an.instanceof(Puzzle);
+  })
 });
 
 

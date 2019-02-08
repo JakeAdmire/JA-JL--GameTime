@@ -30,8 +30,6 @@ class Game {
     });
     domUpdates.disableKeyboard();
     domUpdates.updateRound(this.round - 1, this.round);
-
-    //test whetehr a bonus wheel is created
     if (this.round < 5) {
       this.roundWheel = new Wheel();      
       this.createWheel();
