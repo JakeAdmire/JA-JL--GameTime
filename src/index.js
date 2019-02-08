@@ -40,6 +40,8 @@ $('.submit-names').on( 'click', (e) => {
     domUpdates.fadeNameInput();
     domUpdates.disableBuyVowel();
     domUpdates.updateTurn('2', '0');
+  } else {
+    $('.error').addClass('unhide');
   }
 });
 

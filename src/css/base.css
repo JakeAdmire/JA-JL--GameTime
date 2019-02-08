@@ -292,9 +292,16 @@ footer h4 {
   padding: 0 0 0 10px;
 }
 
-.name-input .error {
-  box-sizing: border-box;
-  border: solid #ff3659 4px;
+.error {
+  display: none;
+  position: absolute;
+  bottom: 195px;
+  color: #ff5d00;
+  font-size: 16px;
+}
+
+.unhide {
+  display: block;
 }
 
 .name-input input::placeholder {
