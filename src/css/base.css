@@ -1,7 +1,6 @@
 body {
   background: url('/images/background3.jpg');
   background-size: cover;
-  /*display: grid;*/
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
@@ -21,10 +20,10 @@ header {
   color: hsla( 0, 0%, 100%, 0.8);
   display: flex;
   font-size: 30px;
+  height: 80px;
   justify-content: center;
   text-shadow: 2px 4px 4px hsl( 23, 31%, 8%);
   width: 100%;
-  height: 80px;
 }
 
 header span {
@@ -54,9 +53,9 @@ header button:hover {
   color: hsla( 0, 0%, 100%, 0.4);
   display: flex;
   flex-direction: row;
+  height: 45px;
   justify-content: space-around;
   width: 100%;
-  height: 45px;
 }
 
 .rounds h2 {
@@ -71,9 +70,9 @@ header button:hover {
 
 main {
   display: flex;
+  height: 305px;
   position: relative;
   width: 100%;
-  height: 305px
 }
 
 .wheel-container {
@@ -120,8 +119,8 @@ main button,
 main button {
   font-size: 25px;
   height: 40px;
-  width: 200px;
   margin: 20px 0;
+  width: 200px;
 }
 
 main button:hover,
@@ -196,12 +195,10 @@ main button:active,
   box-sizing: border-box;
   display: flex;
   flex-flow: wrap;
+  height: 180px;
   justify-content: center;
   margin: 0 auto;
   width: 1150px;
-  /*position: absolute;*/
-  /*bottom: 100px;*/
-  height: 180px;
 }
 
 .keyboard button {
@@ -227,12 +224,12 @@ main button:active,
 
 footer {
   background: hsla( 0, 0%, 0%, 0.3);
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  position: absolute;
   bottom: 0;
+  display: flex;
   height: 85px;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
 }
 
 footer img {
@@ -277,8 +274,8 @@ footer h4 {
   height: 100%;
   justify-content: center;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
 }
 
 .name-input form {
@@ -286,8 +283,8 @@ footer h4 {
   font-size: 20px;
   font-weight: 800;
   justify-content: space-between;
-  width: 400px;
   position: fixed;
+  width: 400px;
 }
 
 .name-input input,
@@ -307,10 +304,10 @@ footer h4 {
 }
 
 .error {
-  position: absolute;
   bottom: 40px;
   color: #ff5d00;
   font-size: 16px;
+  position: absolute;
 }
 
 .name-input input::placeholder {
@@ -347,8 +344,8 @@ footer h4 {
   height: 100%;
   justify-content: center;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
 }
 
 .hidden-popup p {
@@ -382,11 +379,11 @@ footer h4 {
 
 .hidden-popup .puzzle-guess {
   border: none;
-  margin: 0 0 20px;
-  padding: 15px;
   box-sizing: border-box;
   font-size: 30px;
   font-weight: 600;
+  margin: 0 0 20px;
+  padding: 15px;
 }
 
 .puzzle-guess::placeholder {
@@ -397,5 +394,3 @@ footer h4 {
 .puzzle-guess:focus::placeholder {
   color: white;
 }
-
-
