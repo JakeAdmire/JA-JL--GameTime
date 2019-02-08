@@ -37,7 +37,6 @@ describe('Game', function() {
 
   it('should be able to create new players', function() {
     const playersArray = ["Josh", "Jake", "Pam"];
-
     expect(game.players.length).to.equal(0);
     game.createPlayers(playersArray);
     expect(game.players.length).to.equal(3);
@@ -100,8 +99,6 @@ describe('Game', function() {
     expect(game.currentPlayer).to.equal(0);
     const names = ['Josh', 'Jake', 'Pam'];
     game.createPlayers(names);
-
-
     game.cyclePlayers();
     game.cyclePlayers();
     expect(game.currentPlayer).to.equal(2);
@@ -124,9 +121,7 @@ describe('Game', function() {
 
   it('should create a new instance of puzzle', function() {
     expect(game.roundPuzzle).to.deep.equal([]);
-
     game.createPuzzle();
-
     expect(game.roundPuzzle).to.be.an.instanceof(Puzzle);
   })
 });

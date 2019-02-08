@@ -121,6 +121,14 @@ const domUpdates = {
   clearBoard() {
     $('.wheel').empty();
     $('.puzzle-box').empty();  
+  },
+
+  displayWinGame(players) {
+    $('.hidden-popup').fadeIn(500);
+    players.forEach((player, i) => {
+      $('.hidden-popup').append(`<p>${player.name}</p>`);
+      $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
+    })
   }
 };
 
