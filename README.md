@@ -29,14 +29,12 @@ Undoubtedly, the biggest challenge of this project has been enabling the JavaScr
 ## Project "Wins"
 Working remotely was simultaneously a challenge and an overall win for us. We both go to school in Denver; however, we live in different cities. In the end, we were able to accomplish a lot working remotely, which is a skill we are happy to have learned.
 
-## Minimum Viable Product
+## Screenshots of Project
 
-
-### Screenshots of Project
-
-  ![Enter Names Prompt](/src/images/screenshot0.png)
-  ![Initial Game Screen](/src/images/screenshot1.png)
-  ![Partially Through Game](/src/images/screenshot2.png)
+  ![Enter Names Prompt](https://user-images.githubusercontent.com/44077214/52512347-9af5e700-2bc1-11e9-96ca-6e180b470606.png)
+  ![Initial Game Screen](https://user-images.githubusercontent.com/44077214/52512395-ce387600-2bc1-11e9-9cf7-a3dda1be1020.png")
+  ![Enter A Guess Prompt](https://user-images.githubusercontent.com/44077214/52512407-d7294780-2bc1-11e9-9f0d-5d2fef42a095.png)
+  ![Partially Through Game](https://user-images.githubusercontent.com/44077214/52512410-dd1f2880-2bc1-11e9-8147-42c2fc93c9d3.png)
 
 ## Future Implementation Plans
 **Given the time** we would like to implement these features:
