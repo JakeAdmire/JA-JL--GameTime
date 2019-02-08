@@ -41,6 +41,12 @@ describe('Game', function() {
     expect(game.players.length).to.equal(3);
   })
 
+  it('should increase round number', function() {
+    expect(game.round).to.equal(0)
+    game.newRound();
+    expect(game.round).to.equal(1);
+  })
+  
   it('should be able to create a new wheel', function() {
     expect(game.roundWheel).to.not.be.an('object');
     game.newRound();
@@ -102,11 +108,6 @@ describe('Game', function() {
     expect(game.currentPlayer).to.equal(0);
   })
 
-  it('should increase round number', function() {
-    expect(game.round).to.equal(0)
-    game.newRound();
-    expect(game.round).to.equal(1);
-  })
 });
 
 
