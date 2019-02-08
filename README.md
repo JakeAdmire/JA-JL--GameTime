@@ -2,8 +2,10 @@
 Wheel of MisFortune is a work in progress 'Wheel of Fortune' game assigned during MOD 2 at Turing School of Software and Design.  
 You can learn more about the assignment spec by following [this](http://frontend.turing.io/projects/wheel-of-fortune.html) link.
 
-### Link to live version of project
-[You can enjoy the full experience here!](https://jakeadmire.github.io/gametime-starter/).
+## Credits / Contact Info
+Credit for the project goes to team members:
+- Joshua Lavarine (joshua@lavarine.com)
+- Jacob Admire (JakeAdmire1@gmail.com)
 
 ## What was learned?
 Object Oriented Programming (OOP) was a concept almost unknown to us before this project.  
