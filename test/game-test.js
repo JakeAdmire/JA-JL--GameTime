@@ -1,5 +1,7 @@
 import Game from '../src/Game.js';
+import BonusWheel from '../src/bonusWheel.js';
 import domUpdates from '../src/domUpdates.js';
+import Wheel from '../src/Wheel.js';
 import chai from 'chai';
 import spies from 'chai-spies';
 
@@ -110,6 +112,14 @@ describe('Game', function() {
   it('should create a bonus wheel when the round is greater than four', function() {
     game.newRound();
     expect(game.round).to.equal(1);
+    expect(game.bonusWheel).to.deep.equal([]);
+    game.newRound();
+    game.newRound();
+    game.newRound();
+    expect(game.round).to.equal(4);
+    game.newRound();
+    expect(game.round).to.equal(5);
+    expect(game.bonusWheel).to.be.an.instanceof(Wheel);
   })
 
 });
