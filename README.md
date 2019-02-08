@@ -32,7 +32,7 @@ Working remotely was simultaneously a challenge and an overall win for us. We bo
 ## Screenshots of Project
 
   ![Enter Names Prompt](https://user-images.githubusercontent.com/44077214/52512347-9af5e700-2bc1-11e9-96ca-6e180b470606.png)
-  ![Initial Game Screen](https://user-images.githubusercontent.com/44077214/52512395-ce387600-2bc1-11e9-9cf7-a3dda1be1020.png")
+  ![Initial Game Screen](https://user-images.githubusercontent.com/44077214/52512395-ce387600-2bc1-11e9-9cf7-a3dda1be1020.png)
   ![Enter A Guess Prompt](https://user-images.githubusercontent.com/44077214/52512407-d7294780-2bc1-11e9-9f0d-5d2fef42a095.png)
   ![Partially Through Game](https://user-images.githubusercontent.com/44077214/52512410-dd1f2880-2bc1-11e9-8147-42c2fc93c9d3.png)
 
