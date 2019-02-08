@@ -271,7 +271,7 @@ footer h4 {
   color: hsla( 23, 31%, 58%, 0.8);
   font-size: 20px;
   font-weight: 800;
-  height: 42%;
+  /*height: 42%;*/
   justify-content: space-between;
   width: 400px;
 }
@@ -284,6 +284,10 @@ footer h4 {
   height: 50px;
 }
 
+.name-input label {
+  margin: 20px 0px 0px;
+}
+
 .name-input input {
   padding: 0 0 0 10px;
 }
@@ -291,6 +295,15 @@ footer h4 {
 .name-input button {
   background: hsla( 23, 31%, 58%, 0.8);
   color: white;
+  margin: 40px 0px 0px;
+}
+
+.name-input button:hover {
+  background: #966d54cc;
+}
+
+.name-input button:active {
+  opacity: 0.5;
 }
 
 .hidden-popup {
