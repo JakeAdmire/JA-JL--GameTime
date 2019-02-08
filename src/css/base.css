@@ -293,15 +293,10 @@ footer h4 {
 }
 
 .error {
-  display: none;
   position: absolute;
   bottom: 195px;
   color: #ff5d00;
   font-size: 16px;
-}
-
-.unhide {
-  display: block;
 }
 
 .name-input input::placeholder {

@@ -41,7 +41,8 @@ $('.submit-names').on( 'click', (e) => {
     domUpdates.disableBuyVowel();
     domUpdates.updateTurn('2', '0');
   } else {
-    $('.error').addClass('unhide');
+    $('.name-input-form').append(
+      '<p class="error">* Please fill out all fields *</p>');
   }
 });
 
