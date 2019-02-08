@@ -3,6 +3,7 @@ import './css/base.css';
 
 //  Images
 import './images/background3.jpg';
+// import './images/favicon.ico';
 import './images/001-hills.svg';
 import './images/002-waterfall.svg';
 import './images/003-mill.svg';
