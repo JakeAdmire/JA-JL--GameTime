@@ -7,7 +7,8 @@ body {
   margin: 0;
 }
 
-button:focus {
+button:focus,
+input:focus {
   outline: none;
 }
 
@@ -271,7 +272,6 @@ footer h4 {
   color: hsla( 23, 31%, 58%, 0.8);
   font-size: 20px;
   font-weight: 800;
-  /*height: 42%;*/
   justify-content: space-between;
   width: 400px;
 }
@@ -290,6 +290,20 @@ footer h4 {
 
 .name-input input {
   padding: 0 0 0 10px;
+}
+
+.name-input .error {
+  box-sizing: border-box;
+  border: solid #ff3659 4px;
+}
+
+.name-input input::placeholder {
+  color: #aaaaaa;
+  transition: all .2s ease;
+}
+
+.name-input input:focus::placeholder {
+  color: white;
 }
 
 .name-input button {
