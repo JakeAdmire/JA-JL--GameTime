@@ -1,9 +1,7 @@
 body {
   background: url('/images/background3.jpg');
   background-size: cover;
-  display: grid;
   font-family: 'Open Sans', sans-serif;
-  grid-template-rows: 80px 40px 300px 190px 88px;
   margin: 0;
 }
 
@@ -22,6 +20,7 @@ header {
   color: hsla( 0, 0%, 100%, 0.8);
   display: flex;
   font-size: 30px;
+  height: 80px;
   justify-content: center;
   text-shadow: 2px 4px 4px hsl( 23, 31%, 8%);
   width: 100%;
@@ -54,6 +53,7 @@ header button:hover {
   color: hsla( 0, 0%, 100%, 0.4);
   display: flex;
   flex-direction: row;
+  height: 45px;
   justify-content: space-around;
   width: 100%;
 }
@@ -70,6 +70,7 @@ header button:hover {
 
 main {
   display: flex;
+  height: 305px;
   position: relative;
   width: 100%;
 }
@@ -118,8 +119,8 @@ main button,
 main button {
   font-size: 25px;
   height: 40px;
+  margin: 20px 0;
   width: 200px;
-  margin: 0 0 20px;
 }
 
 main button:hover,
@@ -194,6 +195,7 @@ main button:active,
   box-sizing: border-box;
   display: flex;
   flex-flow: wrap;
+  height: 180px;
   justify-content: center;
   margin: 0 auto;
   width: 1150px;
@@ -222,8 +224,11 @@ main button:active,
 
 footer {
   background: hsla( 0, 0%, 0%, 0.3);
+  bottom: 0;
   display: flex;
+  height: 85px;
   justify-content: space-around;
+  position: absolute;
   width: 100%;
 }
 
@@ -269,6 +274,7 @@ footer h4 {
   height: 100%;
   justify-content: center;
   position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -277,6 +283,7 @@ footer h4 {
   font-size: 20px;
   font-weight: 800;
   justify-content: space-between;
+  position: fixed;
   width: 400px;
 }
 
@@ -297,10 +304,10 @@ footer h4 {
 }
 
 .error {
-  position: absolute;
-  bottom: 195px;
+  bottom: 40px;
   color: #ff5d00;
   font-size: 16px;
+  position: absolute;
 }
 
 .name-input input::placeholder {
@@ -337,6 +344,7 @@ footer h4 {
   height: 100%;
   justify-content: center;
   position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -371,11 +379,11 @@ footer h4 {
 
 .hidden-popup .puzzle-guess {
   border: none;
-  margin: 0 0 20px;
-  padding: 15px;
   box-sizing: border-box;
   font-size: 30px;
   font-weight: 600;
+  margin: 0 0 20px;
+  padding: 15px;
 }
 
 .puzzle-guess::placeholder {
@@ -386,5 +394,3 @@ footer h4 {
 .puzzle-guess:focus::placeholder {
   color: white;
 }
-
-
