@@ -129,11 +129,7 @@ const domUpdates = {
       $('.hidden-popup').append(`<p>${player.name}</p>`);
       $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
     })
-  },
-
-
-
-
+  }
 };
 
 export default domUpdates;

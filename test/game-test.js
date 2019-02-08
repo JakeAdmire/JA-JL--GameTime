@@ -1,5 +1,8 @@
 import Game from '../src/Game.js';
+import BonusWheel from '../src/bonusWheel.js';
 import domUpdates from '../src/domUpdates.js';
+import Wheel from '../src/Wheel.js';
+import Puzzle from '../src/Puzzle.js';
 import chai from 'chai';
 import spies from 'chai-spies';
 
@@ -11,7 +14,6 @@ chai.spy.on(domUpdates, [
   'displayCorrectLetter', 'scoreUpdate', 
   'displayDetails', 'appendPuzzle', 
   'clearBoard', 'updateTurn'], () => true);
-
 
 describe('Game', function() {
   let game;
@@ -35,7 +37,6 @@ describe('Game', function() {
 
   it('should be able to create new players', function() {
     const playersArray = ["Josh", "Jake", "Pam"];
-
     expect(game.players.length).to.equal(0);
     game.createPlayers(playersArray);
     expect(game.players.length).to.equal(3);
@@ -98,8 +99,6 @@ describe('Game', function() {
     expect(game.currentPlayer).to.equal(0);
     const names = ['Josh', 'Jake', 'Pam'];
     game.createPlayers(names);
-
-
     game.cyclePlayers();
     game.cyclePlayers();
     expect(game.currentPlayer).to.equal(2);
@@ -110,8 +109,21 @@ describe('Game', function() {
   it('should create a bonus wheel when the round is greater than four', function() {
     game.newRound();
     expect(game.round).to.equal(1);
+    expect(game.bonusWheel).to.deep.equal([]);
+    game.newRound();
+    game.newRound();
+    game.newRound();
+    expect(game.round).to.equal(4);
+    game.newRound();
+    expect(game.round).to.equal(5);
+    expect(game.bonusWheel).to.be.an.instanceof(Wheel);
   })
 
+  it('should create a new instance of puzzle', function() {
+    expect(game.roundPuzzle).to.deep.equal([]);
+    game.createPuzzle();
+    expect(game.roundPuzzle).to.be.an.instanceof(Puzzle);
+  })
 });
 
 

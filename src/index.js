@@ -53,7 +53,7 @@ $('.spin-wheel').on('click', () => {
 
 $('.buy-vowel').on('click', (e) => {
   e.preventDefault();
-  game.buyVowel();
+  game.clickVowel();
 })
 
 $('.solve-puzzle').on('click', () => {
