@@ -128,8 +128,17 @@ class Game {
       this.players[this.currentPlayer].totalScore);
     this.players.forEach(player => {
       player.resetScore();
-    })
-    this.newRound();
+    });
+    if (this.round === 5) {
+      this.endGame();
+    } else {
+      this.newRound();
+    }
+  }
+  endGame() {
+    // domUpdates.removeSolvePuzzle();
+    domUpdates.totalScoreUpdate(this.currentPlayer, this.players[this.currentPlayer].totalScore);
+    domUpdates.displayWinGame(this.players);
   }
 }
 
