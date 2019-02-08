@@ -2,8 +2,9 @@
 <html lang="en-US">
   <head>
     <title>Wheel of Misfortune</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/images/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   </head>
   <body>
     <header>
@@ -188,16 +189,17 @@
       </article>
     </footer>
     <section class="name-input">
-      <form>
+      <form class="name-input-form">
         <label for="player1">Player 1:
-          <input type="text" id="player1" value="Jake">
+          <input type="text" id="player1" placeholder="e.g. Jake..">
         </label>
         <label for="player2">Player 2:
-          <input type="text" id="player2" value="Josh">
+          <input type="text" id="player2" placeholder="e.g. Josh..">
         </label>
         <label for="player3">Player 3:
-          <input type="text" id="player3" value="Taylor">
+          <input type="text" id="player3" placeholder="e.g. Taylor..">
         </label>
+        <!-- <p class="error">* Please fill out all fields *</p> -->
         <button class="submit-names" type="submit">
           Submit Player Names
         </button>

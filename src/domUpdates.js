@@ -107,9 +107,10 @@ const domUpdates = {
     $('.hidden-popup').fadeIn();
     $('.hidden-popup').append(
       '<p class="puzzle-prompt">Solve The Puzzle!!</p>');
-    $('.hidden-popup').append('<input class="puzzle-guess">');
     $('.hidden-popup').append(
-      '<button class="remove-popup">Submit your answer</button>');
+      '<input class="puzzle-guess" placeholder="e.g. Two Left Feet..">');
+    $('.hidden-popup').append(
+      '<button class="submit-answer">Submit your answer</button>');
   },
 
   removeSolvePuzzle() {
@@ -120,7 +121,19 @@ const domUpdates = {
   clearBoard() {
     $('.wheel').empty();
     $('.puzzle-box').empty();  
-  }
+  },
+
+  displayWinGame(players) {
+    $('.hidden-popup').fadeIn(500);
+    players.forEach((player, i) => {
+      $('.hidden-popup').append(`<p>${player.name}</p>`);
+      $('.hidden-popup').append('<p class="puzzle-prompt">Solve The Puzzle!!</p>');
+    })
+  },
+
+
+
+
 };
 
 export default domUpdates;

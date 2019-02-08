@@ -2,7 +2,8 @@
 import './css/base.css';
 
 //  Images
-import './images/background.jpg';
+import './images/background3.jpg';
+// import './images/favicon.ico';
 import './images/001-hills.svg';
 import './images/002-waterfall.svg';
 import './images/003-mill.svg';
@@ -40,6 +41,9 @@ $('.submit-names').on( 'click', (e) => {
     domUpdates.fadeNameInput();
     domUpdates.disableBuyVowel();
     domUpdates.updateTurn('2', '0');
+  } else {
+    $('.name-input-form').append(
+      '<p class="error">* Please fill out all fields *</p>');
   }
 });
 
@@ -54,7 +58,7 @@ $('.buy-vowel').on('click', (e) => {
 
 $('.solve-puzzle').on('click', () => {
   domUpdates.displaySolvePuzzle();
-  $('.remove-popup').on('click', () => {
+  $('.submit-answer').on('click', () => {
     if (game.roundPuzzle.answer.toUpperCase() === 
     $('.puzzle-guess').val().toUpperCase()) {
       game.endRound();
