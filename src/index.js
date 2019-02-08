@@ -58,7 +58,7 @@ $('.buy-vowel').on('click', (e) => {
 
 $('.solve-puzzle').on('click', () => {
   domUpdates.displaySolvePuzzle();
-  $('.remove-popup').on('click', () => {
+  $('.submit-answer').on('click', () => {
     if (game.roundPuzzle.answer.toUpperCase() === 
     $('.puzzle-guess').val().toUpperCase()) {
       game.endRound();

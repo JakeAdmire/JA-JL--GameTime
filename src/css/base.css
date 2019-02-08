@@ -105,23 +105,33 @@ main {
   width: 200px;
 }
 
-main button {
+main button,
+.keyboard button {
   background: hsla( 0, 0%, 0%, 0.3);
   border: none;
   color: hsla( 0, 0%, 100%, 0.8);
-  font-size: 25px;
   font-weight: 800;
-  height: 40px;
-  margin: 0 0 20px;
   text-shadow: 2px 2px 8px hsla( 23, 31%, 8%, 1);
   transition: all .2s ease;
+}
+
+main button {
+  font-size: 25px;
+  height: 40px;
   width: 200px;
+  margin: 0 0 20px;
 }
 
 main button:hover,
 .keyboard button:hover {
   background: hsla( 0, 0%, 50%, 0.5);
   box-shadow: 2px 2px 8px hsla( 23, 31%, 8%, 1);
+}
+
+main button:active,
+.keyboard button:active {
+  box-shadow: none;
+  opacity: 0.8;
 }
 
 .puzzle-container {
@@ -190,15 +200,9 @@ main button:hover,
 }
 
 .keyboard button {
-  background: hsla( 0, 0%, 0%, 0.3);
-  border: none;
-  color: hsla( 0, 0%, 100%, 0.8);
   font-size: 40px;
-  font-weight: 800;
   height: 75px;
   margin: 0 5px;
-  text-shadow: 2px 2px 8px hsla( 23, 31%, 8%, 1);
-  transition: all .2s ease;
   width: 75px;
 }
 
@@ -338,6 +342,7 @@ footer h4 {
 
 .hidden-popup p {
   text-align: center;
+  margin: 0 0 10px;
 }
 
 .hidden-popup button {
@@ -349,3 +354,37 @@ footer h4 {
   height: 50px;
   width: 200px;
 }
+
+.hidden-popup button:hover {
+  background: #946c53cc;
+}
+
+.hidden-popup button:active {
+  opacity: 0.5
+}
+
+.hidden-popup .submit-answer,
+.hidden-popup .puzzle-guess {
+  height: 60px;
+  width: 400px;
+}
+
+.hidden-popup .puzzle-guess {
+  border: none;
+  margin: 0 0 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.puzzle-guess::placeholder {
+  color: #aaaaaa;
+  transition: all .2s ease;
+}
+
+.puzzle-guess:focus::placeholder {
+  color: white;
+}
+
+
