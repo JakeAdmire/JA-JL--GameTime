@@ -6,9 +6,9 @@ class Puzzle {
     this.hint = null;
     this.puzzleDetails = null;
     this.difficulty = null;
-    this.domDifficulty = null;
     this.category = null;
     this.answer = [];
+    this.splitAnswer = [];
   }
   chooseDifficulty() {
     let result = null;
@@ -29,19 +29,17 @@ class Puzzle {
       this.difficulty.puzzle_bank.length);
     this.puzzleDetails = this.difficulty.puzzle_bank[randomIndex];
     this.answer = this.puzzleDetails.correct_answer;
-    this.domDifficulty = this.puzzleDetails.number_of_words;
     this.category = this.puzzleDetails.category;
-    domUpdates.displayDetails(this.domDifficulty, this.category);
+    domUpdates.displayDetails(this.puzzleDetails.number_of_words, this.category);
     this.displayPuzzle();
     return this.puzzleDetails;
   }
   displayPuzzle() {
-    let splitAnswer = this.answer.split('');
-    console.log(this.answer);
-    splitAnswer.forEach((letter, i) => {
+    this.splitAnswer = this.answer.split('');
+    this.splitAnswer.forEach((letter, i) => {
       domUpdates.appendPuzzle(letter, i);
     })
-    return splitAnswer;
+    return this.splitAnswer;
   }
 }
 
