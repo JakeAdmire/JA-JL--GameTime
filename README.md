@@ -1,55 +1,71 @@
-## Wheel of MisFortune!
-Wheel of MisFortune is a work in progress 'Wheel of Fortune' game assigned during MOD 2 at Turing School of Software and Design.  
-You can learn more about the assignment spec by following [this](http://frontend.turing.io/projects/wheel-of-fortune.html) link.
+###### Top
 
-## Credits / Contact Info
-Credit for the project goes to team members:
-- Joshua Lavarine (joshua@lavarine.com)
-- Jacob Admire (JakeAdmire1@gmail.com)
+<br />
+<p align="center">
+  <h1 align="center">Wheel of Misfortune</h1>
+  <p align="center">
+    A word-based, puzzle-solving video game!
+    <br />
+    <br />
+    <b><a href="https://jakeadmire.github.io/Wheel-of-Misfortune">View Demo</a></b>
+  </p>
+</p>
+<div align="center">
 
-## What was learned?
-Object Oriented Programming (OOP) was a concept almost unknown to us before this project.  
-One of the main goals was to use OOP as efficiently as possible.  
-This includes taking advantage of JavaScript classes:  
+[![LinkedIn][linkedin-shield]][linkedin-url] [![Gmail][gmail-shield]][gmail-url] [![GitHub][github-shield]][github-url]
+</div>
 
-    class Example {
-      constructor(name) {
-        this.name = name;
-      }
-    }  
-As well as importing and exporting those classes amongst eachother:
+## Table of Contents
 
-    import domUpdates from './domUpdates.js';
-    import data from './data.js';
-    import Game from './Game.js';
-    import Player from './Player.js';
-    import $ from 'jquery';
+- [About The Project](#About-The-Project)
+  - [Media](#Media)
+  - [Built With](#Built-With)
+- [Contributors](#Contributors)
+- [Assignment Details](#Assignment-Details)
 
-## Challenges we faced
-Undoubtedly, the biggest challenge of this project has been enabling the JavaScript classes to speak to one another. Not understanding how it worked at the beginning of the project was a major setback, but it's something we have risen above.
+## About The Project
 
-## Project "Wins"
-Working remotely was simultaneously a challenge and an overall win for us. We both go to school in Denver; however, we live in different cities. In the end, we were able to accomplish a lot working remotely, which is a skill we are happy to have learned.
+:video_game: **Wheel of Misfortune** was intended as a way to learn the foundations of Object Oriented Programming and Test Driven Development with vanilla JavaScript.
 
-## Screenshots of Project
+---
 
-  ![Enter Names Prompt](https://user-images.githubusercontent.com/44077214/52512347-9af5e700-2bc1-11e9-96ca-6e180b470606.png)
-  ![Initial Game Screen](https://user-images.githubusercontent.com/44077214/52512395-ce387600-2bc1-11e9-9cf7-a3dda1be1020.png)
-  ![Enter A Guess Prompt](https://user-images.githubusercontent.com/44077214/52512407-d7294780-2bc1-11e9-9f0d-5d2fef42a095.png)
-  ![Partially Through Game](https://user-images.githubusercontent.com/44077214/52512410-dd1f2880-2bc1-11e9-8147-42c2fc93c9d3.png)
+### Media:
 
-## Future Implementation Plans
-**Given the time** we would like to implement these features:
-- Cleaner, DRYer CSS code
-- Mobility
+![full page screenshot](https://user-images.githubusercontent.com/44077214/52512395-ce387600-2bc1-11e9-9cf7-a3dda1be1020.png)
 
-## Tools Used to Build Project
-[Sublime Text Editor](https://www.sublimetext.com/)  
-[jQuery (JavaScript library)](https://jquery.com/)  
-[Mocha (Node.js Testing Suite)](https://mochajs.org/)   
-[Chai (JavaScript Assertion Library)](https://www.chaijs.com/)
+### Built With:
+- HTML5
+- CSS3 
+- JavaScript
+- jQuery
+- Mocha & Chai
 
-## Credits / Contact Info
-Credit for the project goes to team members:
-- Joshua Lavarine (joshua@lavarine.com)
-- Jacob Admire (JakeAdmire1@gmail.com)
+## Contributors
+
+Click [here](https://github.com/JakeAdmire/Wheel-of-Misfortune/graphs/contributors) to view a graph of the contributions to this project.
+
+- [Jake Admire](https://github.com/jakeadmire)
+- [Joshua Lavarine](https://github.com/jlavar1)
+
+## Assignment Details
+
+The intended assignment was to provide a proof of understanding of basic OOP & TDD concepts within JavaScript. 
+
+---
+
+This project was assigned by Brittany Storoz, Pamela Lovett, and Robert Jaeger
+_@ Turing School of Software & Design, Denver, CO._
+
+---
+
+**[BACK TO TOP](#top)**
+
+<!-- URL References  -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-0077b5.svg?style=for-the-badge&logo=linkedin
+[linkedin-url]: https://linkedin.com/in/jakeadmire
+
+[gmail-shield]: https://img.shields.io/badge/-Email-red.svg?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-url]: https://mailto:jakeadmire1@gmail.com
+
+[github-shield]: https://img.shields.io/badge/dynamic/json?label=Follow&query=length&url=https://api.github.com/users/jakeadmire/followers&style=for-the-badge&logo=github
+[github-url]: https://mailto:jakeadmire1@gmail.com
