@@ -20,6 +20,9 @@
 - [About The Project](#About-The-Project)
   - [Media](#Media)
   - [Built With](#Built-With)
+- [Getting Started](#Getting-Started)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
 - [Contributors](#Contributors)
 - [Assignment Details](#Assignment-Details)
 
@@ -39,6 +42,32 @@
 - JavaScript
 - jQuery
 - Mocha & Chai
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+---
+
+### Prerequisites
+
+* npm
+```sh
+npm install npm@latest -g
+```
+
+---
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/JakeAdmire/Wheel-of-Misfortune
+```
+2. Install NPM packages
+```sh
+npm install
+```
 
 ## Contributors
 
